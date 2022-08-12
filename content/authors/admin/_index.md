@@ -22,7 +22,7 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/
 organizations:
-  - name: UPC University
+  - name: stanford University
     url: ""
 education:
   courses:
