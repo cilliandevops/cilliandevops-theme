@@ -39,8 +39,16 @@ email: ""
 superuser: true
 highlight_name: true
 ---
-CillianDevOps is a professor of Software development engineer 。His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+CillianDevOps is a professor of Software development engineer 。
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+<!--StartFragment-->
+
+* 👋 Hi, I’m @cilliandevops
+* 👀 I’m interested in conding、music、painting...
+* 🌱 I’m currently learning ...
+* 💞️ I’m looking to collaborate on ...
+* 📫 How to reach me ... [cilliandevops@gmail.com](mailto:cilliandevops@gmail.com)
+
+<!--EndFragment-->
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
