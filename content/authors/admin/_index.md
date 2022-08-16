@@ -1,7 +1,7 @@
 ---
 title: Cillian DevOps
 role: SRE
-avatar_filename: 2.png
+avatar_filename: 3.jpg
 bio: My research interests include distributed robotics, mobile computing and
   programmable matter.
 interests:
