@@ -24,7 +24,13 @@ organizations:
   - name: UPC University
     url: https://www.upc.edu.cn/
 education:
-  courses: []
+  courses:
+    - course: python
+      year: 2020
+      institution: cilliandevops
+    - course: java
+      year: 2022
+      institution: cilliandevops
 email: cilliandevops@gmail.com
 superuser: true
 highlight_name: true
