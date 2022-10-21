@@ -41,7 +41,7 @@ content:
     longitude: "-122.1697"
   email: test@example.org
 design:
-  columns: "2"
+  columns: "1"
 ---
 cilliandevops@gmail.com
 
