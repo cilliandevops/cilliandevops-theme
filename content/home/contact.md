@@ -5,7 +5,7 @@ headless: true
 weight: 130
 title: Contact
 subtitle: cilliandevops
-active: false
+active: true
 content:
   form:
     provider: netlify
@@ -45,4 +45,4 @@ design:
 ---
 cilliandevops@gmail.com
 
-w﻿echat: cilliandevops
+wechat: cilliandevops
