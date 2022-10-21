@@ -1,41 +1,92 @@
 ---
-title: Example Project
+slides: example
+url_pdf: ""
 summary: An example of using the in-built project page.
+url_video: ""
+date: 2016-04-27T00:00:00Z
+external_link: ""
+url_slides: ""
+title: python post request
 tags:
   - Deep Learning
-date: '2016-04-27T00:00:00Z'
-
-# Optional external URL for project (replaces project detail page).
-external_link: ''
-
-image:
-  caption: Photo by rawpixel on Unsplash
-  focal_point: Smart
-
 links:
   - icon: twitter
     icon_pack: fab
     name: Follow
     url: https://twitter.com/georgecushen
-url_code: ''
-url_pdf: ''
-url_slides: ''
-url_video: ''
-
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: example
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+url_code: ""
 ---
+Author's note: In the process of writing some scripts in python, it is inevitable to call the web interface to test or download some information, so how to send a post request, let's study it today.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+1, post and get
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+The post and get are the two most commonly used methods in the HTTP hypertext transfer protocol. If there is no difference in essence, the purpose is to request information, both are the same transport layer protocol, only the format of the transmission message is inconsistent. The biggest inconsistency in the format is that the parameters of the get method are all placed in the url, and everyone can see it, but the parameters of the post are placed in the request body, which is relatively hidden and said to be relatively safe. In fact, from the perspective of transmission, it is because Clear text transmission on the http network is insecure, so if you want to be safe, you can only encrypt it, which is https. There is also a limit on the length of the data. The url is a maximum of 2048 characters. There is no limit to the post method, which can be characters or binary data. Of course, the http protocol itself does not have length restrictions on url and body, which are generally limited by servers and browsers, because processing long characters will consume more resources, and length restrictions will be imposed for performance and security. (General convention, the parameters are written in ? or & split, you can also agree on the writing method, and the server can respond)
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+2. requests module
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+The request module is a built-in module in python. It is mainly used to send http requests. The requests module is more concise than urllib. It imports the module package and returns a response object after each requests request. The object contains specific response information. These information tools Different business returns different information
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+import request
+
+Send get request r = requests.get('https://www.runoob.com/') Send post request r = requests.post('https://www.runoob.com/try/ajax/demo_post.php' )
+
+3. Content-Type
+
+When sending a post request, you need to pay attention to the header information of the http request, especially the data type of the content of the request, which literally means content-type. What are the common types:
+
+(1) application/x-www-form-urlencoded
+
+This is a common key-value pair type, which is page form data.
+
+(2) application/json
+
+The requested data type is json format data
+
+(3) multipart/form-data
+
+Generally used for uploading files
+
+(4) application/xml
+
+The request data format is xml
+
+4. python post request
+
+In an http request, it needs to include the request line, request header, and message body
+
+Requests uses form to send data by default
+
+import requests #Introduce requests
+
+url = 'url' #Request address
+
+data = {
+
+'id': '123'
+
+'name': 'cillian'
+
+} #Request content data
+
+r = request.post(url, data = data)
+
+print(r.json()) View the response result, the input parameter is json
+
+If it is in json format, add headers
+
+headers = {'content-type': 'application/json'}
+
+Or use the json parameter directly
+
+r = requests.post(url, json=data)
+
+add cookies
+
+cookie = {'cillian' : '123'}
+
+r = requests.post(url,data,cookies=cookie)
+
+Well, here we have a basic understanding of the python interface request post method, let's practice, I wish you a smooth learning!
