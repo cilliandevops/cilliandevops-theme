@@ -1,8 +1,6 @@
 ---
 title: Welcome to cilliandevops
-subtitle: Welcome 👋 We know that first impressions are important, so we've
-  populated your new site with some initial content to help you get familiar
-  with everything in no time.
+subtitle: Keep working hard to learn and change yourself!
 date: 2022-08-12T13:51:52.937Z
 summary: Welcome
 draft: false
