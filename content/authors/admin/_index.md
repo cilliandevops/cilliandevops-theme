@@ -2,8 +2,7 @@
 title: Cillian DevOps
 role: SRE
 avatar_filename: avatar.jpg
-bio: My research interests include distributed robotics, mobile computing and
-  programmable matter.
+bio: My research interests include distributed robotics, cloud computing,
 interests:
   - Artificial Intelligence
   - Computational Linguistics
@@ -14,7 +13,7 @@ social:
     link: /#contact
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
+    link: https://twitter.com/cilliandevops
   - icon: github
     icon_pack: fab
     link: https://github.com/cilliandevops
@@ -22,20 +21,11 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/
 organizations:
-  - name: stanford University
-    url: ""
+  - name: UPC University
+    url: https://www.upc.edu.cn/
 education:
-  courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
-email: ""
+  courses: []
+email: cilliandevops@gmail.com
 superuser: true
 highlight_name: true
 ---
@@ -44,11 +34,9 @@ CillianDevOps is a professor of Software development engineer 。
 <!--StartFragment-->
 
 * 👋 Hi, I’m @cilliandevops
-* 👀 I’m interested in conding、music、painting...
-* 🌱 I’m currently learning ...
+* 👀 I’m interested in coding、music、painting...
+* 🌱 I’m currently learning java...
 * 💞️ I’m looking to collaborate on ...
 * 📫 How to reach me ... [cilliandevops@gmail.com](mailto:cilliandevops@gmail.com)
 
 <!--EndFragment-->
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
